@@ -10,6 +10,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     background-color: #E9EAEE;
+    color: black;
 }
 
 h1,
@@ -22,7 +23,8 @@ h6 {
 
 #header {
     font-family: Raleway;
-    font-size: 3em;
+    color: white;
+    padding-top: 1em;
 }
 
 #header p {
@@ -30,9 +32,7 @@ h6 {
 }
 
 #headline {
-    text-align: center;
     font-style: italic;
-    margin-top: 3em;
     
 }
 
@@ -82,22 +82,35 @@ i {
 
 h2 {
     font-family: Raleway, Helvetica-Neue, Helvetica, sans-serif;
-    color: #BC6026
+    color: #BC6026;
 }
 
 .logo {
     height: 16px;
+    width: 16px;
     margin-left: 15px;
 }
 
 .icon {
-    height: 1.5em;
+    height: .5em;
     margin-bottom: 2em;
 }
 
-#navbar a {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+.infocon {
+    height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+
+.navbar {
+    height: 1em;
+    background-color: #181C22;
+    font-size: 16px;
+}
+
+svg {
+    height: 1em;
+    fill: currentColor;
 }
 
 ul {
@@ -105,9 +118,16 @@ ul {
     padding-left:0;
 }
 
-.navitem {
+.brand {
+    color: white;
+}
+
+.navbar li {
     display: inline;
     font-variant: small-caps;
+    float: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 .menuitem {
@@ -139,8 +159,15 @@ nav {
 @media screen and (min-width: 768px) {
     body {
         font-size: 20px;
-        background-color: rgba(24, 28, 34, 0.8);
-        color: white;
+    }
+    
+    .navbar {
+        background-color: rgba(24, 28, 34, 0.8)
+    }
+    
+    .navbar li {
+        padding-left: 1em;
+        padding-right: 1em;
     }
     
     h2 {
@@ -157,17 +184,14 @@ nav {
         background-repeat: no-repeat;
         height: 553px;
         text-align: right;
+        font-size: 3em;
     }
     
     #headline {
         font-size: 1.25em;
         margin-top: 3em;
         margin-bottom: 3em;
-    }
-    
-    #headline img {
-        height: 1.5em;
-        margin-bottom: 1em;
+        text-align: center;
     }
     
     #story img {
@@ -176,11 +200,18 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+    #header {
+        margin-top: 2em;
+        color: black;
+    }
+    
     #header p {
         display: none;
     }
-    
-    #headline img {
+    #headline p {
+        text-align: center;
+    }
+    #headline svg {
         display: none;
     }
 }
